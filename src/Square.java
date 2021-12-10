@@ -1,17 +1,26 @@
 public class Square {
     int length;
 
-    public Square(int l) {
-        this.length = l;
+    // Parameterized constructor
+    public Square(int length) {
+        this.length = length;
     }
 
     public int area() {
-        return (length * length);
+        try {
+            return (length * length); // return Area of shape Square
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
-
 
     public int perimeter() {
-        return (length + length + length + length);
+        try {
+            return (length + length + length + length); // return Perimeter of shape Square
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
-
 }

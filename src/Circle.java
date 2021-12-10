@@ -1,19 +1,35 @@
 public class Circle {
     double radius;
 
-    public Circle(double r) {
-        this.radius = r;
+    // Parameterized constructor
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     public double area() {
-        return (22 * radius * radius) / 7;
+        try {
+            return (22 * radius * radius) / 7; // return Area of shape Circle
+        } catch (ArithmeticException c) {
+            c.printStackTrace();
+            return 0;
+        }
     }
 
     public double diameter() {
-        return (2 * radius);
+        try {
+            return (2 * radius); // return Diameter of shape Circle
+        } catch (ArithmeticException c) {
+            c.printStackTrace();
+            return 0;
+        }
     }
 
     public double circumference() {
-        return (2 * 22 * radius) / 7;
+        try {
+            return (2 * 22 * radius) / 7; // return Circumference of shape Circle
+        } catch (ArithmeticException c) {
+            c.printStackTrace();
+            return 0;
+        }
     }
 }

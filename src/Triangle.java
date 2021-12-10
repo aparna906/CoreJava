@@ -3,18 +3,28 @@ public class Triangle {
     int height;
     int side;
 
-    public Triangle(int b, int h, int s) {
-        this.base = b;
-        this.height = h;
-        this.side = s;
+    // Parameterized constructor
+    public Triangle(int base, int height, int side) {
+        this.base = base;
+        this.height = height;
+        this.side = side;
     }
 
-    public int area(){
-        return(1*height*base)/2;
+    public int area() {
+        try {
+            return (height * base) / 2; //return Area of shape Triangle
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 
-    public int perimeter(){
-        return(height+base+side);
+    public int perimeter() {
+        try {
+            return (height + base + side); //return Perimeter of shape Triangle
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
-
 }
