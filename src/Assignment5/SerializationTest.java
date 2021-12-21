@@ -28,7 +28,7 @@ public class SerializationTest {
         list.add(student3);
         list.add(student4);
 
-        //Serialization
+        //Serialization (Storing a state of an object)
         FileOutputStream fileOutputStream = new FileOutputStream("Student.txt");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(list);
