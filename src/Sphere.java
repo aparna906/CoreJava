@@ -1,16 +1,15 @@
 public class Sphere {
     double radius;
 
-    // Parameterized constructor
-    public Sphere(double radius) {
-        this.radius = radius;
+    public Sphere(double r) {
+        this.radius = r;
     }
 
     public double area() {
         try {
             return (4 * Math.PI * radius * radius);
         } catch (ArithmeticException c) {
-            c.printStackTrace();
+            c.getMessage();
             return (0.0);
         }
     }
@@ -19,7 +18,7 @@ public class Sphere {
         try {
             return (2 * radius);
         } catch (ArithmeticException c1) {
-            c1.printStackTrace();
+            c1.getMessage();
             return (0.0);
         }
     }

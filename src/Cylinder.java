@@ -2,36 +2,21 @@ public class Cylinder {
     double height;
     double radius;
 
-    // parameterized constructor
-    public Cylinder(double height, double radius) {
-        this.height = height;
-        this.radius = radius;
+    public Cylinder(double h, double r) {
+        this.height = h;
+        this.radius = r;
     }
 
     public double baseArea() {
-        try {
-            return (Math.PI * radius * radius); // return Base Area of shape Cylinder
-        } catch (ArithmeticException e) {
-            e.printStackTrace();
-            return 0.0;
-        }
+        return (Math.PI * radius * radius);
     }
 
     public double volume() {
-        try {
-            return (Math.PI * radius * radius * height); //return Volume of shape Cylinder
-        } catch (ArithmeticException e) {
-            e.printStackTrace();
-            return 0.0;
-        }
+        return (Math.PI * radius * radius * height);
     }
 
     public double surfaceArea() {
-        try {
-            return ((2 * 22 * radius) / 7) * (radius + height); //return Surface Area of shape Cylinder
-        } catch (ArithmeticException e) {
-            e.printStackTrace();
-            return 0.0;
-        }
+        return ((2 * 22 * radius) / 7) * (radius + height);
     }
+
 }
