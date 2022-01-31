@@ -21,17 +21,14 @@ public class Main {
             if (words[i] != "0") System.out.println(words[i] + "  " + count);
             count++;
         }
-
         //write content into word.txt file
-        try (FileWriter fileWriter = new FileWriter(file);
-             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+        try (FileWriter fileWriter = new FileWriter(file); BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
             for (String str : words) {
                 bufferedWriter.write(str + System.lineSeparator());
             }
         } catch (IOException ioException) {
             ioException.getMessage();
         }
-
     }
 
     //read url from url.txt file
